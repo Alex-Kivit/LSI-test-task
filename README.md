@@ -8,14 +8,22 @@ The task took me about 5.5 hours to complete. Final tests, bug fixes and descrip
 
 # Setup
 1. In project root run:
-      composer install
+```
+composer install
+```
 2. Create a new postgresql database and modify .env file with your connection credentials
-3. Update database schema with:
-      php bin/console doctrine:schema:update --force
-4. Load test data into database with:
-      php bin/console doctrine:fixtures:load
-5. Launch web server with:
-      symfony server:start
+3. Update database schema:
+```
+php bin/console doctrine:schema:update --force
+```
+4. Load test data into database:
+```
+php bin/console doctrine:fixtures:load
+```
+5. Launch application:
+```
+symfony server:start
+```
       
 # Possible improvements
 
