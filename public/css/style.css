@@ -1,0 +1,27 @@
+table, th, td {
+    border: 1px solid black;
+  }
+
+table {
+    width: 100%;
+    max-height: 75vh;
+}
+
+th, td {
+    width: 100px;
+    font-size: 24px;
+}
+
+.search-col {
+    height: 75vh;
+}
+
+.form-field {
+    width: 30vh;
+    margin: 20px;
+}
+
+.form-submit {
+    width: 20vh;
+    margin-top: 40vh;
+}

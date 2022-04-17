@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Raport{% endblock %}
+
+{% block body %}
+    {% set lokal = app.request.get('lokal') %}
+
+    <div class="row my-5">
+        <div class="col-md-4">
+            <table class="search-col">
+                <td>
+                    <form method="GET">
+                        <select class="form-field" name="lokal">
+                            <option value="1" {% if lokal == 1 %}selected{% endif %}>Lokal 1</option>
+                            <option value="2" {% if lokal == 2 %}selected{% endif %}>Lokal 2</option>
+                            <option value="3" {% if lokal == 3 %}selected{% endif %}>Lokal 3</option>
+                            <option value="4" {% if lokal == 4 %}selected{% endif %}>Lokal 4</option>
+                        </select>
+                        
+                        <input class="form-field" type="text" id="start-picker" name="start" placeholder="Start date">
+                        <input class="form-field" type="text" id="end-picker" name="end" placeholder="End date">
+                        <input class="form-field form-submit" type="submit" value="Submit">
+                    </form>
+                </td>
+            </table>
+        </div>
+        <div class="col-md-8">
+            <table>
+                <tr>
+                    <th>Nazwa</th>
+                    <th>Data</th>
+                    <th>Godzina</th>
+                    <th>Użytkownik</th>
+                    <th>Lokal</th>
+                </tr>
+                {% for export in exportHistory %}
+                <tr>
+                    <td>{{ export.title }}</td>
+                    <td>{{ export.date|date("d.m.Y") }}</td>
+                    <td>{{ export.time|date("H:i:s") }}</td>
+                    <td>{{ export.username }}</td>
+                    <td>Lokal {{ export.lokal }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}

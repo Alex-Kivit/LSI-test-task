@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <!-- Libs and node modules stylesheets -->
+            <link rel="stylesheet" href="/css/bootstrap.min.css">
+            <link rel="stylesheet" href="{{ asset('jquery-datetimepicker/build/jquery.datetimepicker.min.css') }}">
+
+            <!-- Custom stylesheets -->
+            <link rel="stylesheet" href="/css/style.css">
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
+
+        {% block javascripts %}
+            <!-- Libs and node modules scripts -->
+            <script src="/js/bootstrap.bundle.min.js"></script>
+            <script src="{{ asset('jquery/dist/jquery.min.js') }}"></script>
+            <script src="{{ asset('jquery-datetimepicker/build/jquery.datetimepicker.full.min.js') }}"></script>
+
+            <!-- Custom scripts -->
+            <script src="/js/main.js"></script>
+        {% endblock %}
+    </body>
+</html>
