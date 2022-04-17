@@ -11,16 +11,16 @@
                 <td>
                     <form method="GET">
                         <select class="form-field" name="lokal">
-                            <option value="" {% if lokal == null %}selected{% endif %}>All</option>
+                            <option value="" {% if lokal == null %}selected{% endif %}>Wszystkie</option>
                             <option value="1" {% if lokal == 1 %}selected{% endif %}>Lokal 1</option>
                             <option value="2" {% if lokal == 2 %}selected{% endif %}>Lokal 2</option>
                             <option value="3" {% if lokal == 3 %}selected{% endif %}>Lokal 3</option>
                             <option value="4" {% if lokal == 4 %}selected{% endif %}>Lokal 4</option>
                         </select>
                         
-                        <input class="form-field" type="text" id="start-picker" name="start" placeholder="Start date" value="{{ app.request.get('start') }}">
-                        <input class="form-field" type="text" id="end-picker" name="end" placeholder="End date" value="{{ app.request.get('end') }}">
-                        <input class="form-field form-submit" type="submit" value="Submit">
+                        <input class="form-field" type="text" id="start-picker" name="start" placeholder="Od:" value="{{ app.request.get('start') }}">
+                        <input class="form-field" type="text" id="end-picker" name="end" placeholder="Do:" value="{{ app.request.get('end') }}">
+                        <input class="form-field form-submit" type="submit" value="Zatwierdź">
                     </form>
                 </td>
             </table>
