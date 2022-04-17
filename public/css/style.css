@@ -21,7 +21,17 @@ th, td {
     margin: 20px;
 }
 
+.form-field-top {
+    width: 30vh;
+    margin-top: 0px;
+}
+
 .form-submit {
     width: 20vh;
     margin-top: 40vh;
+}
+
+.form-label {
+    font-size: 20px;
+    margin: 0px 0px 5px 20px;
 }

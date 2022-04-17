@@ -10,7 +10,8 @@
             <table class="search-col">
                 <td>
                     <form method="GET">
-                        <select class="form-field" name="lokal">
+                        <label class="form-label" for="lokal">Lokal:</label>
+                        <select id="lokal" class="form-field form-field-top" name="lokal">
                             <option value="" {% if lokal == null %}selected{% endif %}>Wszystkie</option>
                             <option value="1" {% if lokal == 1 %}selected{% endif %}>Lokal 1</option>
                             <option value="2" {% if lokal == 2 %}selected{% endif %}>Lokal 2</option>
@@ -18,8 +19,8 @@
                             <option value="4" {% if lokal == 4 %}selected{% endif %}>Lokal 4</option>
                         </select>
                         
-                        <input class="form-field" type="text" id="start-picker" name="start" placeholder="Od:" value="{{ app.request.get('start') }}">
-                        <input class="form-field" type="text" id="end-picker" name="end" placeholder="Do:" value="{{ app.request.get('end') }}">
+                        <input id="start-picker" class="form-field" type="text" name="start" placeholder="Od:" value="{{ app.request.get('start') }}">
+                        <input id="end-picker" class="form-field" type="text" name="end" placeholder="Do:" value="{{ app.request.get('end') }}">
                         <input class="form-field form-submit" type="submit" value="Zatwierdź">
                     </form>
                 </td>
