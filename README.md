@@ -4,6 +4,8 @@
 Normally I would add node_modules directory to .gitignore, however I decided to make an exception in this case for convenience purposes.
 There's also a little mess in commits - I accidentally removed migrations directory at some point :).
 
+The task took me about 5.5 hours to complete. Final tests, bug fixes and description took 1 more hour.
+
 # Setup
 1. In project root run:
       composer install
