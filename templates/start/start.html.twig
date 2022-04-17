@@ -17,8 +17,8 @@
                             <option value="4" {% if lokal == 4 %}selected{% endif %}>Lokal 4</option>
                         </select>
                         
-                        <input class="form-field" type="text" id="start-picker" name="start" placeholder="Start date">
-                        <input class="form-field" type="text" id="end-picker" name="end" placeholder="End date">
+                        <input class="form-field" type="text" id="start-picker" name="start" placeholder="Start date" value="{{ app.request.get('start') }}">
+                        <input class="form-field" type="text" id="end-picker" name="end" placeholder="End date" value="{{ app.request.get('end') }}">
                         <input class="form-field form-submit" type="submit" value="Submit">
                     </form>
                 </td>
