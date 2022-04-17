@@ -12,7 +12,7 @@
                     <form method="GET">
                         <label class="form-label" for="lokal">Lokal:</label>
                         <select id="lokal" class="form-field form-field-top" name="lokal">
-                            <option {% if lokal == null %}selected{% endif %}>Wszystkie</option>
+                            <option value="" {% if lokal == null %}selected{% endif %}>Wszystkie</option>
                             <option value="1" {% if lokal == 1 %}selected{% endif %}>Lokal 1</option>
                             <option value="2" {% if lokal == 2 %}selected{% endif %}>Lokal 2</option>
                             <option value="3" {% if lokal == 3 %}selected{% endif %}>Lokal 3</option>
