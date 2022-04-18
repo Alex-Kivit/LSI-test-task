@@ -1,5 +1,3 @@
-# Test task for LSI Software
-
 # Notes
 Normally I would add node_modules directory to .gitignore, however I decided to make an exception in this case for convenience purposes.
 There's also a little mess in commits - I accidentally removed migrations directory at some point :).
